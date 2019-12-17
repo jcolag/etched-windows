@@ -1,0 +1,23 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+HCW=0
+COMPRESS=12 Hall Zeck
+LCID=0x409 0x0 0x0 ;English (United States)
+REPORT=Yes
+FTS=1
+CONTENTS=Introduction
+TITLE=Etch-A-Sketch
+COPYRIGHT=Visual Etch-A-Sketch for Windows '95, version 1.1 Copyright © 1998 Colagioia Industries
+CITATION=Visual Etch-A-Sketch for Windows '95 Help:
+DEFFONT=Arial,10,0
+HLP=.\etch.hlp
+
+[FILES]
+.\Etch.rtf
+
+[WINDOWS]
+Main="Etch-A-Sketch Help",,60676,(r13421772),(r1177),f2; main help window
+
+[CONFIG]
+BrowseButtons()

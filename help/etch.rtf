@@ -1,0 +1,740 @@
+{\rtf\ansi
+{\fonttbl
+ \f0\froman Times New Roman;
+ \f1\fdecor Courier New;
+ \f2\fswiss Arial Black;
+ \f3\ftech Symbol;
+}       \deff0
+{\colortbl
+ \red0\green0\blue0;
+ \red191\green0\blue0;
+ \red0\green100\blue127;
+ \red0\green0\blue255;
+ \red127\green0\blue127;
+ \red255\green255\blue255;
+}
+{\info
+ {\title Virtual Etch-A-Sketch Help}
+ {\author John Colagioia}
+ {\keywords Virtual Etch-A-Sketch, Hypertext}
+ {\creatim\yr1998\mo3\dy14\hr18}
+ {\revtim\yr1999\mo7\dy28\hr14\min23}
+ {\version5}
+}
+
+#{\footnote Introduction}
+${\footnote Etch-A-Sketch Introduction}
+K{\footnote Introduction}
+K{\footnote Contents}
+K{\footnote Acknowledgments}
+\f0\f1\f2\f3
+\line\f0\fs40\cf2\qc
+Virtual Etch-A-Sketch for Windows '95 Help\f0
+\pard\fs20\cf0\par\par
+As mentioned in the {\uldb license}{\v License}, the Virtual
+ Etch-A-Sketch is designed as a tribute to the original digital
+ graphics hardware and software, with no infringements intended.  Ohio
+ Arts (who is probably owned by someone else) owns the real
+ Etch-A-Sketch, all associated trademarks and copyrights, and probably
+ the associated "look and feel."
+\par\par
+This is fairly intuitive and straightforward software, so there won't
+ be{\i much} help available.  Actually, it's almost an insult that you
+ went{\i this} far into the system...I mean, it's a pair of dials and
+ a small menu.
+\par\par\fs32
+Contents
+\line\fs20\tab
+{\uldb Operation}{\v Operation}
+\par\tab
+{\uldb Menu Options}{\v Menu}
+\par\tab
+{\uldb How do I ... ?}{\v HowTo}
+\par\tab
+{\uldb Licensing Agreement}{\v License}
+\par\par\fs32
+Other Interfaces
+\line\fs20\tab
+{\uldb Keyboard}{\v Keyboard}
+\par\tab
+{\uldb TCP/IP (Sockets)}{\v WinSock}
+\par\tab
+{\uldb Command-Line Startup}{\v CmdLine}
+\par\tab
+{\uldb Registry}{\v Registry}
+\par\par\fs32
+Acknowledgements
+\line\fs20\tab
+It was all \cf1Dan O'Sullivan\cf0's idea...blame him.
+\page
+
+#{\footnote License}
+${\footnote Etch-A-Sketch License Agreement}
+K{\footnote Agreement}
+K{\footnote Etch-A-Sketch License Agreement}
+K{\footnote License}
+K{\footnote License Agreement}
+\line\f0\fs40\cf2\qc
+License Agreement
+\pard\fs20\cf1\par\par
+Without any legalese \cf0 (I simply refuse to use any):
+\par\par
+Colagioia is using the name "Etch-A-Sketch" without any permission
+ whatsoever from anybody (at least, not from anyone who's permission
+ would make any difference in court).  I'm not intending to infringe
+ on anything; it's just for fun, and a bit of a tribute to the original
+ digital graphics hardware.
+\par
+The upshot is don't sue Colagioia for copyright infringement, and
+ Colagioia won't sue you for not registering our software (admit it to
+ yourself\endash you haven't registered, and we both know it)...
+\par\par
+Same deal with destruction of data, loss of time, subsequent cosmic
+ irradiation and/or transformation to superhero/supervillain.  I tested
+ it, it looks good to me, but I'm not going to be responsible for
+ anything going wrong on your end.
+\par\par
+Again, don't sue me, I won't sue you...
+\par\par\par
+But...give me a call if that superhero thing works out, though.
+\par\par\par\par
+Back to the {\uldb Introduction}{\v Introduction}.
+\page
+
+#{\footnote Operation}
+${\footnote Etch-A-Sketch Operation}
+K{\footnote Operation}
+K{\footnote Concepts}
+K{\footnote Overview}
+\line\f0\fs40\cf2\qc
+Etch-A-Sketch Operation
+\pard\fs20\cf0\par\par
+The Etch-A-Sketch basically gives you a single ability\endash to draw
+ horizontal and vertical lines with ease.  The left-hand dial controls
+ horizontal drawing:  Left-clicking the dial moves the cursor to the
+ left, and right-clicking will move the cursor to the right.  The
+ right-hand dial controls vertical drawing:  Left-clicking will move
+ the cursor upward, and right-clicking moves the cursor downward.
+\par\par
+All other functionality must be accessed via the {\uldb menu}{\v Menu}
+ or {\uldb externally}{\v WinSock}.
+\page
+
+#{\footnote Menu}
+${\footnote Etch-A-Sketch Menu Options}
+K{\footnote Menu}
+K{\footnote Menu Options}
+K{\footnote Options}
+\line\f0\fs40\cf2\qc
+Etch-A-Sketch Menu Options
+\pard\fs30\cf0\par\par
+The available menu options are as follows:
+\fs20\par\par\tab
+{\uldb File Menu}{\v MenuFile}
+\par\tab
+{\uldb Options Menu}{\v MenuOpt}
+\par\tab
+{\uldb Network Menu}{\v MenuNet}
+\par\tab
+{\uldb Help Menu}{\v MenuHelp}
+\par\par
+Many menu items have {\uldb keyboard accelerators}{\v Keyboard}
+ attached to them, for your convenience.
+\page
+
+#{\footnote Keyboard}
+${\footnote Etch-A-Sketch Keyboard}
+K{\footnote KKeyboard}
+K{\footnote Controls}
+K{\footnote KKeystrokes}
+K{\footnote Accelerators}
+\line\f0\fs40\cf2\qc
+Etch-A-Sketch Keyboard Accelerators
+\pard\fs20\cf0\par\par
+To ease the use of the Etch-A-Sketch for those who are remiss to use
+ a mouse, the following keyboard accelerators have been added:
+\par\par\li500\brdrbar\brdrb\cellx2880\cellx5760\intbl\b
+Operation\cell Keystroke\b0\cell\row\intbl
+{\ul Add Node to Workgroup}{\v NetAdd}\cell Insert\cell\row\intbl
+{\ul Clear Screen}{\v FileNew}\cell F2\cell\row\intbl
+Cursor Down\cell Down Arrow\cell\row\intbl
+Cursor Left\cell Left Arrow\cell\row\intbl
+Cursor Right\cell Right Arrow\cell\row\intbl
+Cursor Up\cell Up Arrow\cell\row\intbl
+{\ul Exit Program}{\v FileExit}\cell ALT-F4\cell\row\intbl
+{\ul Flash Cursor}{\v OptFlash}\cell F5\cell\row\intbl
+{\ul Help Contents}{\v HelpCont}\cell F1\cell\row\intbl
+{\ul Open File}{\v FileOpen}\cell CTRL-O\cell\row\intbl
+{\ul Refresh}{\v OptRef}\cell F4\cell\row\intbl
+{\ul Remove Node from Workgroup}{\v NetDel}\cell Delete\cell\row\intbl
+{\ul Save File}{\v FileSave}\cell CTRL-S\cell\row\intbl
+{\ul Save File As}{\v FileSaveAs}\cell CTRL-A\cell\row\intbl
+{\ul Undo}{\v OptUndo}\cell CTRL-Z\cell
+\cell\row\pard\page
+
+#{\footnote HowTo}
+${\footnote How Do I}
+K{\footnote How Do I ... ?}
+K{\footnote How To ...}
+\line\f0\fs40\cf2\qc
+How Do I ... ?
+\pard\fs20\cf0\par\par
+Q.  ... Draw a diagonal line?
+\par\li300
+A.  You can't.  At least, not directly.  You can alternate between
+ vertical and horizontal movements, though.  It's much easier with the
+ {\uldb keyboard}{\v Keyboard} than the dials, by the way.  An
+ alternative is to use the {\uldb LOGO interpreter}{\v Logo}, moving
+ forward, turned 45 degrees.
+\par\par\pard
+Q.  ... Draw a circle?
+\par\li300
+A.  You probably can't.  You can try to alternate verticals and
+ horizontals, but it's really hard and it'll take lots of practice,
+ just like a real Etch-A-Sketch.  Alternatively, you could try using
+ the {\uldb sockets interface}{\v WinSock} through a programming
+ language like C or PERL.  Of course, that's what the {\uldb LOGO
+ interpreter}{\v Logo} was specifically designed for, too.
+\par\par\pard
+Q.  ... Start a picture from a different location (than the center of
+ the window)?
+\par\li300
+A.  You need to turn off the "sticky cursor."  Pull down the "Options"
+ menu, and uncheck the "Center on New" menu item.  When you begin a
+ new document, the cursor will remain where you left it.
+\par\par\pard
+Q.  ... Draw an angled line?
+\par\li300
+A.  Like diagonal lines, you really can't.  Again, not directly.  In
+ this case, you're going to have to do some trigonometry (remember:
+ "Oscar had a heap of apples") to find the\f3  D\f0 y and the\f3  D\f0
+x of the line, then alternate horizontal and vertical movements in
+ that ratio.  Also check out the {\uldb sockets interface}
+{\v WinSock}, since that might make the job easier.  And this is
+ another case where the {\uldb LOGO interpreter}{\v Logo} might be of
+ use.
+\par\par\pard
+Q.  ... Export files?
+\par\li300
+A.  Under {\uldb File}{\v MenuFile}/{\ul Save As}{\v FileSaveAs}, you
+ can change the target format using the drop-down box labelled "Save as
+ type."  The only non-proprietary format currently supported is the
+ Drawing Interchange Format (DXF), which is understood by many CAD
+ packages.
+\par
+So, you can use the Virtual Etch-A-Sketch as a sort of "scratch pad" to
+ a real CAD package.  If you're insane, anyway.
+\par
+Other formats (like Bitmaps and Windows MetaFiles) may follow as time
+ and knowledge permit.
+\par\par\pard
+Q.  ... Import files?
+\par\li300
+A.  At this time, no common file formats are usable as input to the
+ Etch-A-Sketch.  The reason, quite simply, is that the Etch-A-Sketch is
+ not equipped to display most of the possible designs which can be
+ specified by even the most primitive CAD or drawing program, and to
+ allow it to do so would violate the basic concept of the program.
+\par\par\pard\page
+
+#{\footnote MenuFile}
+${\footnote Etch-A-Sketch File Menu Options}
+K{\footnote File Menu}
+K{\footnote File Menu Options}
+K{\footnote File Options}
+\line\f0\fs40\cf2\qc
+Etch-A-Sketch File Menu
+\pard\fs30\cf0\par\par
+The available options on the file menu are as follows:
+\fs20\par\par\tab
+{\ul New}{\v FileNew}
+\par\tab
+{\ul Open}{\v FileOpen}
+\par\tab
+{\ul Save}{\v FileSave}
+\par\tab
+{\ul Save As}{\v FileSaveAs}
+\par\brdrt\tab
+{\ul Exit}{\v FileExit}
+\par\pard\page
+
+#{\footnote MenuOpt}
+${\footnote Etch-A-Sketch Options Menu Options}
+K{\footnote Options}
+K{\footnote Options Menu}
+\line\f0\fs40\cf2\qc
+Etch-A-Sketch Options Menu
+\pard\fs30\cf0\par\par
+The available options on the options menu are as follows:
+\fs20\par\par\tab
+{\ul Center on New}{\v OptCenter}
+\par\tab
+{\ul Shake on New}{\v OptShake}
+\par\tab
+{\ul Flash Cursor}{\v OptFlash}
+\par\brdrt\tab
+{\ul Refresh}{\v OptRef}
+\par\pard\tab
+{\ul Undo}{\v OptUndo}
+\page
+
+#{\footnote MenuNet}
+${\footnote Etch-A-Sketch Options Menu Network}
+K{\footnote Network}
+K{\footnote Network Menu}
+\line\f0\fs40\cf2\qc
+Etch-A-Sketch Network Menu
+\pard\fs30\cf0\par\par
+The available options on the options menu are as follows:
+\fs20\par\par\tab
+{\ul Display IP Address}{\v NetShow}
+\par\tab
+{\ul Add Node to Workgroup}{\v NetAdd}
+\par\tab
+{\ul Remove Node from Workgroup}{\v NetDel}
+\page
+
+#{\footnote MenuHelp}
+${\footnote Etch-A-Sketch Help Menu Options}
+K{\footnote Help}
+K{\footnote Help Menu}
+K{\footnote Help Menu Options}
+K{\footnote Help Options}
+\line\f0\fs40\cf2\qc
+Etch-A-Sketch Help Menu
+\pard\fs30\cf0\par\par
+The available options on the help menu are as follows:
+\fs20\par\par\tab
+{\ul Contents}{\v HelpCont}
+\par\brdrt\tab
+{\ul About}{\v HelpAbout}
+\page\pard
+
+#{\footnote FileNew}
+${\footnote New Etch-A-Sketch File}
+K{\footnote File}
+K{\footnote New}
+K{\footnote New File}
+\fs25\cf1
+File/New
+\fs20\cf0\par
+Clears the Etch-A-Sketch "screen" by "shaking" the window.
+\page
+
+#{\footnote FileOpen}
+${\footnote Open Etch-A-Sketch File}
+K{\footnote File}
+K{\footnote Open}
+K{\footnote Open File}
+\fs25\cf1
+File/Open
+\fs20\cf0\par
+Opens a previously-saved Etch-A-Sketch File.
+\par\par\fs15
+Note: the file must be in the proper (EAS) format, otherwise the Open
+ command will fail.  DXF files, for example, cannot be read, simply
+ because CAD packages are so much more versatile than the Etch-A-Sketch
+ for Windows, that it is not even worth trying.
+\page
+
+#{\footnote FileSave}
+${\footnote Save Etch-A-Sketch File}
+K{\footnote File}
+K{\footnote Save}
+K{\footnote Save File}
+\fs25\cf1
+File/Save
+\fs20\cf0\par
+Saves the currently-active Etch-A-Sketch screen to the prespecified
+ file.
+\page
+
+#{\footnote FileSaveAs}
+${\footnote Save Etch-A-Sketch File As}
+K{\footnote File}
+K{\footnote Save As}
+K{\footnote Save File As}
+\fs25\cf1
+File/Save As
+\fs20\cf0\par
+Saves the currently-active Etch-A-Sketch screen to a file, respecifying
+ the filename or file format.
+\par\par\fs15
+Note: Currently, the only two file formats supported are the internal,
+ proprietary (EAS) format, and the Drawing Interchange File (DXF)
+ format.
+\page
+
+#{\footnote FileExit}
+${\footnote Exit Etch-A-Sketch}
+K{\footnote Exit}
+\fs25\cf1
+File/Exit
+\fs20\cf0\par
+Exits the Virtual Etch-A-Sketch for Windows '95.
+\par\par\fs15
+Note: The current Etch-A-Sketch version pops up an annoying "Did you
+ want to save this file before exiting?  No?  Why not?"  box when
+ exiting.  This behavior can be changed from the command line, for
+ those who don't want to hear about it.
+\page
+
+#{\footnote OptCenter}
+${\footnote Center Cursor on New Screen}
+K{\footnote Center}
+K{\footnote New}
+K{\footnote New Screen}
+\fs25\cf1
+Options/Center on New
+\fs20\cf0\par
+When checked, recenters the cursor on File/New.  Otherwise, the cursor
+ remains in its last location.
+\par\par\fs15
+Note: This is not yet part of the file header, meaning that the new
+ center for a given file may cause unpredictable results when Opening
+ it back up.
+\page
+
+#{\footnote OptShake}
+${\footnote Shake Window on New Screen}
+K{\footnote Shake}
+K{\footnote New}
+K{\footnote New Screen}
+\fs25\cf1
+Options/Shake on New
+\fs20\cf0\par
+When checked, shakes the screen (like an Etch-A-Sketch clearing) on
+ File/New.  Otherwise, the screen clears like a normal (and boring)
+ Windows application.
+\page
+
+#{\footnote OptFlash}
+${\footnote Flash Cursor}
+K{\footnote Cursor}
+K{\footnote Flash}
+K{\footnote Flash Cursor}
+\fs25\cf1
+Options/Flash Cursor
+\fs20\cf0\par
+When selected, the cursor flashes between black and white, for
+ identification and location purposes.
+\page
+
+#{\footnote OptRef}
+${\footnote Refresh Etch-A-Sketch Screen}
+K{\footnote Refresh}
+K{\footnote Screen}
+\fs25\cf1
+Options/Refresh
+\fs20\cf0\par
+Redraws the current Etch-A-Sketch screen.  There are a small handful
+ of situations which make this necessary.  Sometimes, for example, a
+ line drawn too fast for Windows to keep up will get dots of red in
+ it.  Refreshing the image turns the whole thing back to black, how
+ it's supposed to be.
+\page
+
+#{\footnote NetShow}
+${\footnote Display IP Address Internet Protocol}
+K{\footnote Display}
+K{\footnote IP}
+K{\footnote Address}
+K{\footnote Port}
+K{\footnote Number}
+\fs25\cf1
+Network/Display IP Address
+\fs20\cf0\par
+Shows the currently-configured IP addresses for the current computer.
+  This includes multiple IP addresses (from, for example, multiple
+ ethernet cards, and/or multiple network connections) and Dynamic IP
+ addresses, as well as the basic configured address.  This option
+ also displays the port number currently in use.
+\par\par
+Note:  If the networking code was unable to run, this display will
+ only provide that information.
+\page
+
+#{\footnote NetAdd}
+${\footnote Network Internet Add Node Workgroup Collaborative}
+K{\footnote Network}
+K{\footnote Internet}
+K{\footnote Add}
+K{\footnote Node}
+K{\footnote Workgroup}
+K{\footnote Collaborative}
+\fs25\cf1
+Network/Add Node to Workgroup
+\fs20\cf0\par
+Adds a network-accessible Etch-A-Sketch to the collaborative workgroup,
+ allowing that Etch-A-Sketch to share control.
+\par\par
+(Not supported at this time)
+\page
+
+#{\footnote NetDel}
+${\footnote Network Internet Remove Node Workgroup Collaborative}
+K{\footnote Network}
+K{\footnote Internet}
+K{\footnote Remove}
+K{\footnote Node}
+K{\footnote Workgroup}
+K{\footnote Collaborative}
+\fs25\cf1
+Network/Remove Node from Network
+\fs20\cf0\par
+Eliminates one of the collaborating Etch-A-Sketches from the
+ collaboration group.
+\par\par
+(Not supported at this time)
+\page
+
+#{\footnote OptUndo}
+${\footnote Undo last action}
+K{\footnote Undo}
+K{\footnote Error}
+\fs25\cf1
+Options/Undo
+\fs20\cf0\par
+Removes most-recently-added pixel from the picture.
+\page
+
+#{\footnote HelpCont}
+${\footnote Help Contents}
+K{\footnote Help}
+K{\footnote Contents}
+K{\footnote Search}
+\fs25\cf1
+Help/Contents
+\fs20\cf0\par
+Displays the Table of Contents of the Etch-A-Sketch Help File.  Of
+ course, since you're reading this message, you probably already knew
+ that.
+\page
+
+#{\footnote HelpAbout}
+${\footnote Etch-A-Sketch About Box}
+K{\footnote About}
+K{\footnote About Box}
+K{\footnote Etch-A-Sketch}
+K{\footnote Etch-A-Sketch About Box}
+\fs25\cf1
+Help/About
+\fs20\cf0\par
+Displays copyright and licensing information about the Etch-A-Sketch for
+ Windows '95.
+\page
+
+#{\footnote CmdLine}
+${\footnote Command Line Switches}
+K{\footnote Command}
+K{\footnote Line}
+K{\footnote Switches}
+K{\footnote Startup}
+K{\footnote Start}
+\line\f0\fs40\cf2
+Command-Line Switches:  Startup
+\fs20\cf0\par\par
+There are a handful of configuration details that can be handled when
+activating the Etch-A-Sketch, either from a DOS-like Prompt, or in
+the "Target" field of a Shortcut.
+\par\par
+The full command line is:
+\par\tab
+etch.exe -f <filename> -o <port> -y
+\par
+where:
+\par\par
+\li200\brdrbar\brdrb
+\intbl\b
+Option\cell Effect\b0\cell\row\intbl
+-c- or -cn\cell Starts the Virtual Etch-A-Sketch for Windows with the
+ automatic cursor centering disabled.\b0\cell\row\intbl
+-f\cell Allows the user to specify an Etch-A-Sketch file to {\ul Open
+ a File}{\v FileOpen} on startup.  The filename must be specified
+ immediately after, if this option is used.\b0\cell\row\intbl
+-o\cell Configures the service port that the Etch-A-Sketch will listen
+ on.  If you don't know what that means, you don't need this option.  A
+ short (decimal) integer must be specified immediately afterward, if
+ this option is used.\b0\cell\row\intbl
+-s- or -sn\cell Starts the Virtual Etch-A-Sketch for Windows with the
+ "shaking" disabled.\b0\cell\row\intbl
+-y\cell Tells the Etch-A-Sketch that the answer to any questions (like
+ "{\ul Exit}{\v FileExit} without saving?") is "Yes."  The popup box
+ will not even appear.\cell\cell\row\pard\par
+The service port may also be configured by adding the following line
+ to the \\Windows\\Services file:\par\tab
+etch\tab <number>/tcp\par
+where <number> is the same as specified the same way as by the "-o"
+ option, above.  Note that, in either case, this number must not
+ conflict with any server running on the machine.\par\par
+For example, if the Etch-A-Sketch is to run on port 2345, one could
+ either run it as:\par\tab
+etch.exe -o 2345\par
+or add the line:\par\tab
+etch\tab 2345/tcp\par
+to the \\Windows\\Services file.
+\page
+
+#{\footnote WinSock}
+${\footnote Sockets Communications Interface}
+K{\footnote Sockets}
+K{\footnote Communications}
+K{\footnote Interface}
+\line\f0\fs40\cf2
+External Communications:  The Sockets Interface
+\fs20\cf0\par\par
+The Etch-A-Sketch for Windows, due to...ah..."popular demand," uses
+ WinSock to allow external applications to control the Etch-A-Sketch.
+  It is trivially simple.  The Etch-A-Sketch for Windows waits (listens)
+ on port 2342 of the PC.  When an external program (like Telnet, a web
+ browser, or any old network transmission program) makes a connection,
+ it reads the input string (the URL if it's a web browser, or the first
+ thing typed if it's Telnet), and interprets it in a fairly simplistic
+ manner, reading from left to right:
+\par\par
+If a capital or lowercase \cf1'U'\cf0  is found, the Etch-A-Sketch
+ moves the cursor up once.
+\par\par
+If a capital or lowercase \cf1'D'\cf0  is found, the Etch-A-Sketch
+ moves the cursor down once.
+\par\par
+If a capital or lowercase \cf1'L'\cf0  is found, the Etch-A-Sketch
+ moves the cursor to the left once.
+\par\par
+If a capital or lowercase \cf1'R'\cf0  is found, the Etch-A-Sketch
+ moves the cursor to the right once.
+\par\par
+If a capital or lowercase \cf1'Z'\cf0  is found, the Etch-A-Sketch
+ removes the most recently added pixel
+\par\fs15
+ Note: 'Z' is used to match the CTRL-Z {\uldb keyboard accelerator}
+{\v Keyboard} and because 'U' (which would more naturally stand for
+ {\ul Undo}{\v OptUndo}), obviously, is taken for "Up.")
+\par\par\fs20
+If a capital (but \cf2not\cf0  lowercase) \cf1'Q'\cf0  is found, the
+ Etch-A-Sketch terminates the connection to the client.  It is
+ considered polite cleanup to terminate single-use command strings with
+ a capital 'Q.'
+\par\par
+More controls may be added as they are found necessary or useful.
+\page
+
+#{\footnote Registry}
+${\footnote Special Registry Keys}
+K{\footnote Registry}
+K{\footnote Key}
+K{\footnote Keys}
+\line\f0\fs40\cf2\qc
+Special Registry Keys for the Etch-A-Sketch for Windows
+\pard\fs20\cf0\par\par
+For convenience, several keys can be defined in the Windows Registry
+ (using RegEdit.exe) that can handle some special configuration for
+the Etch-A-Sketch for Windows.
+\par\par
+All keys are under the HKEY_LOCAL_MACHINE\\Software\\Colagioia\\Etch-A-Sketch
+ key.  They are:
+\par\par
+Color:  A String Value, containing three integers delimeted by
+ commas, which represent the RGB value for the background color
+ of the Etch-A-Sketch for Windows.  If not found, the default
+ value is "180,0,0".
+\par\par
+BkColor:  A String Value, containing three integers delimeted by
+ commas, which represent the RGB value for the "etching region"
+ of the Etch-A-Sketch for Windows.  If not found, the default
+ value is "128,128,128".
+\par\par
+DrawColor:  A String Value, containing three integers delimeted by
+ commas, which represent the RGB value for the pen color for
+ "etching."  If not found, the default value is "0,0,0".
+\par\par
+PollRate:  A DWORD Value, containing how frequently the Etch-A-
+Sketch for Windows checks the {\uldb external sockets}{\v Winsock}
+ interface for incoming data.  The value is in milliseconds, and
+ the default is 250 (one-quarter second).
+\par\par
+DialSpeed:  A DWORD Value, containing the "repeat rate" for the
+ dials on the Etch-A-Sketch for Windows.  If the mouse button is
+ held down over one of the dials, the Etch-A-Sketch for Windows
+ will wait no longer than the value listed (in milliseconds) in
+ DialSpeed to move the pointer.  The default is also 250
+ milliseconds.
+\par\par
+MRULength:  A DWORD Value, containing the number of items allowed
+ as "Most Recently Used" files on the {\uldb File Menu}{\v MenuFile}
+'s list.  The default, if this key is not found, is 4.
+\par\par\par
+To create these keys:
+\par\tab
+Run regedit.exe
+\par\tab
+Open HKEY_LOCAL_MACHINE
+\par\tab
+In HKEY_LOCAL_MACHINE, open "Software"
+\par\tab
+If the key "Colagioia" exists in Software, open it.  Otherwise,
+ create it.
+\par\tab
+In Colagioia, if the key "Etch-A-Sketch" exists, open it. 
+ Otherwise, create it.
+\par\tab
+In Etch-A-Sketch, create:
+\par\tab\tab
+A String Value named "Color",
+\par\tab\tab
+A String Value named "BkColor",
+\par\tab\tab
+A String Value named "DrawColor",
+\par\tab\tab
+A DWORD Value named "PollRate",
+\par\tab\tab
+And a DWORD Value named "DialSpeed",
+\par\tab\tab
+And a DWORD Value named "MRULength",
+\par\tab
+if they do not already exist.  Once they exist, you can Modify them
+ to any values you like.
+\page
+
+#{\footnote Logo}
+${\footnote Logo Interpreter}
+K{\footnote Logo}
+K{\footnote Interpreter}
+\line\f0\fs40\cf2\qc
+LOGO Language Interpreter
+\pard\fs20\cf0\par\par
+The LOGO Interpreter (logo.exe) handles a subset of the LOGO language,
+ and converts the commands into "UDLR" commands, sending them to port
+ 2342 of the local machine.
+\par\par
+With an initial condition of "pointing up," the commands available are:
+\par\tab
+fd NN --or-- forward NN:  Moves the cursor forward NN spaces.
+\par\tab
+bk NN --or-- back NN:  Moves the cursor in the opposite direction of
+ forward.
+\par\tab
+lt NN --or-- left NN:  Turns the cursor's perspective to the left NN
+ degrees.
+\par\tab
+rt NN --or-- right NN:  Turns the cursor's perspective to the right
+ NN degrees.
+\par\tab
+undo NN:  Removes the last NN UDLR commands--which may or may not
+ equate to LOGO movements, due to angles.
+\par\tab
+repeat NN [ ]:  Repeats whatever is contained in the braces ([ ]) NN
+ times.  The commands can be any LOGO command, including another
+ repeat.
+\par\par
+Example:  repeat 4 [fd 24 lt 90 repeat 360 [fd 1 rt 1] rt 90 bk 24 lt 90]
+\par
+This creates a picture with four tangential circles.
+\par\par
+Note that a LOGO program can also be typed into a text file (using
+ Notepad or a similar tool) and run from the interpreter by running
+ (from the "Run Window" or MS-DOS Prompt)
+\par\tab
+"logo.exe <filename>"
+\page
+}
