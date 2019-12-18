@@ -1,0 +1,3 @@
+repeat 10 [repeat 3 [fd 150 rt 120] rt 36]
+repeat 8 [repeat 4 [fd 120 rt 90] rt 45]
+repeat 20 [repeat 8 [fd 50 rt 45] rt 18]
