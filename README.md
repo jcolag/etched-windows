@@ -42,4 +42,4 @@ Future enhancements will include (as time permits, of course):
 
 You can feel free to send me suggestions and bug reports.  I may or may not do something about them, if I can ever find a compiler that works.
 
-
+**2020 Note**:  There's a decent chance this wasn't my final version, so I've added the `test` folder with some additional code from a CVS repository that I'm pretty sure were eventually added.  At this writing, I have not sifted through any of it to determine its usefulness.
